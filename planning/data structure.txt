@@ -1,0 +1,17 @@
+Sample restaurant data:
+
+sample = {
+  name: 'string';
+
+  address: 'string';
+  cuisine: 'string';
+  price: 'string'; //0,1,2 (0 is '$', 2 is '$$$')
+  takeaway: boolean;
+  delivery: boolean;
+
+  menu: [
+        ['item', price, availability],
+        ['item', price, availability],
+        ['item', price, availability],
+        ];
+}

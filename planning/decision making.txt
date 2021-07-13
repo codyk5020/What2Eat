@@ -1,0 +1,50 @@
+Decision making
+
+Host decision, eat in or delivery
+
+Question
+  4 options
+    Each option is associated with (a) cuisine(s), price range or locality
+  
+Compile associations into data structure
+
+resultRaw = {
+  price = ['$', '$$', '$$$', '$'];
+  cuisine = ['chinese', 'chinese', 'japanese', 'indian' 'western'];
+  locality = [10, 50, 10, 5, 5, 50, 5];
+  takeawayOrDineIn = "t" or "d";
+}
+
+Determine:
+- Mean price range (round to lower range)
+- Median cuisine
+- Median locality (round to lower range)
+
+resultProcessed = {
+  price = '$';
+  cuisine = 'chinese';
+  locality = 5;
+}
+
+find restaurant which has closest match (in terms of price, cuisine and locality) to the processed data
+  - assign priority points for each piece of information:
+    - price:
+       match = 3 points
+       1 off = 1 points
+       2 off = 0 points
+    - cuisine:
+      match = 5 points
+      no match = -2 points
+    - locality:
+      within: +2 points
+      out by 15km: +1 points
+      out by more than 15km: -2 points
+      out by more than 30km: -100 points
+    - dine in or takeaway
+      match to host's decision
+      If match: +0 points
+      No match: -5 points
+
+Return 'recommendations' based on top scorers
+
+

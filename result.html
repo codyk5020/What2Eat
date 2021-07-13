@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Our Recommendations</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<!-- Google charts Api  --> 
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', {packages: ['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        google.charts.setOnLoadCallback(drawChart2);
+        google.charts.setOnLoadCallback(drawChart3);
+      function drawChart() {
+      // Define the chart to be drawn.
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Element');
+      data.addColumn('number', 'Percentage');
+      data.addRows([
+        ['Pizza', 0.78],
+        ['Pasta', 0.21],
+        ['Cheese', 0.01]
+      ]);
+      var options = {
+        backgroundColor: {
+        fill: '#FF0000',
+        fillOpacity: 0
+      },
+      pieHole: 0.9
+    }
+
+      // Instantiate and draw the chart.
+      var chart = new google.visualization.PieChart(document.getElementById('myPieChart'));
+      chart.draw(data, options);
+    }
+
+    function drawChart2() {
+      // Define the chart to be drawn.
+      var data2 = new google.visualization.DataTable();
+      data2.addColumn('string', 'Element');
+      data2.addColumn('number', 'Percentage');
+      data2.addRows([
+        ['Pizza', 0.78],
+        ['Pasta', 0.21],
+        ['Cheese', 0.01]
+      ]);
+    var options = {
+        backgroundColor: {
+        fill: '#FF0000',
+        fillOpacity: 0
+      },
+    }
+
+      // Instantiate and draw the chart.
+      var chart2 = new google.visualization.BarChart(document.getElementById('myBarChart'));
+      chart2.draw(data2, options);
+    }
+
+    function drawChart3() {
+      // Define the chart to be drawn.
+      var data2 = new google.visualization.DataTable();
+      data2.addColumn('string', 'Element');
+      data2.addColumn('number', 'Percentage');
+      data2.addRows([
+        ['Pizza', 0.78],
+        ['Pasta', 0.21],
+        ['Cheese', 0.01]
+      ]);
+    var options = {
+        backgroundColor: {
+        fill: '#FF0000',
+        fillOpacity: 0,
+      },
+        is3D: true,
+        title: 'My Daily Activities',
+    }
+
+      // Instantiate and draw the chart.
+      var chart2 = new google.visualization.PieChart(document.getElementById('graph3'));
+      chart2.draw(data2, options);
+    }
+
+
+    </script>
+
+</head>
+
+<body>
+	<div class='background'>
+    <br>
+		<img src='What2EatIcon.png' style='align:center; height:140px; width:140px;'>
+    <h1 align='center' style='font-family:Righteous;color: #0469A1;font-size:50px
+    '>What2Eat</h1>
+
+    <div align='center'>
+        <div class='resultPage'><p style='font-family:Righteous;color:white'> Based on your responses your top pick is:</p>
+        <h1 style='font-family:Righteous;color:white'>Mcduckies</h1>
+        </div>
+        
+        <br><br>
+        <div class='resultPage'>
+            <p style='font-family:Righteous;color:white'> Here's the breakdown of your results:</p>
+            <div id='myPieChart'></div>
+            <div id='myBarChart'></div>
+            <div id='graph3'></div>
+        </div>
+        
+    </div>
+
+    <div style='text-align:center'>
+      <p class='incFont'>El Hombres inc<br>2021<br>All rights reserved
+      </p>
+    </div>
+	</div>
+  
+  	<script src="js/shared.js">
+	</script>
+</body>
+</html>

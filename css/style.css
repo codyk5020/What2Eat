@@ -1,0 +1,147 @@
+.background {
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  position:absolute;
+  width:100%;
+  height:100%;
+  padding: 0px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: conic-gradient(from 305.00deg at 50% 50%, rgba(100, 100,100, 0), #FF6B00 300deg, #661116 359.96deg);
+}
+.incFont{
+  width: 366px;
+  height: 54px;
+
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight:bold;
+  font-size: 12px;
+  line-height: 21px;
+  justify-content: center;
+  position: relative;
+  bottom: 5%;
+  color: #000000; 
+}
+
+.buttonFont{
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 28px;
+  color: #FFFFFF;
+
+  width: 200px;
+  height: 70px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-sizing: border-box;
+  box-shadow: 20px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px
+}
+.buttonFont:active {
+            transform: scale(0.98);
+            /* Scaling button to 0.98 of its original size */
+            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+            /* Lowering the shadow */
+}  
+    
+.inputFont{
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 28px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  width: 228px;
+  height: 83px;
+  border: 2px solid rgba(10, 10, 10, 0.14);
+  box-sizing: border-box;
+  border-radius: 4px
+}
+ 
+
+.buttonFont:active {
+            transform: scale(0.98);
+            /* Scaling button to 0.98 of its original size */
+            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+            /* Lowering the shadow */
+}
+
+.questionButtons{
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 28px;
+  color: #FFFFFF;
+
+  width: 80%;
+  height: 14%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-sizing: border-box;
+  box-shadow: 20px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px
+}
+
+.questionButtons:active {
+            transform: scale(0.98);
+            /* Scaling button to 0.98 of its original size */
+            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+            /* Lowering the shadow */
+}
+
+.waitPage{
+  padding: 15px;
+  background: rgba(24,167,228,1);
+  width: 80%;
+  border-radius: 15px 15px 15px 15px;
+  margin: auto;
+}
+.resultPage{
+  padding: 15px;
+  background: rgba(24,167,228,1);
+  width: 80%;
+  border-radius: 15px 15px 15px 15px;
+  margin: auto;
+}
+
+@keyframes scaling{
+  0%, 100%{
+    transform: scale(0.2);
+    background-color: #0469A2;
+  }
+  40%{
+    transform: scale(0.8);
+    background-color: rgba(24,167,228,1);
+  }
+  50%{
+    transform: scale(0.9);
+    background-color: #0469A2;
+  }
+}
+
+.dots {
+    height: 20px;
+    width: 20px;
+    border-radius:50%;
+    transform: scale(0);
+    background-color:red;
+    animation: scaling 2.5s ease-in-out infinite;
+    display: inline-block;
+    margin:.5rem;
+}
+
+div:nth-child(0){
+  animation-delay:0s;
+}
+div:nth-child(1){
+  animation-delay:0s;
+}
+div:nth-child(2){
+  animation-delay:0s;
+}
